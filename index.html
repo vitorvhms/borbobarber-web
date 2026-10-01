@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a0a0a">
+  <title>BORBOBARBER | Barbearia & Estilo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <a href="#inicio" class="logo" aria-label="BORBOBARBER - Início">BORBO<span>BARBER</span></a>
+    <nav aria-label="Navegação principal">
+      <a href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#horarios">Horários</a><a href="#contato">Contato</a>
+    </nav>
+    <div class="header-actions"><button class="account-btn" id="minhaConta">Minha conta</button><button class="header-btn" id="agendarTopo">Agendar horário</button></div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <div class="hero-index"><span>01</span><i></i><span>SALTO · SP</span></div>
+        <p class="tag">BARBEARIA · ESTILO · ATITUDE</p>
+        <h1>Seu estilo começa na <span>BORBOBARBER.</span></h1>
+        <p class="hero-text">Cortes modernos, barba alinhada e atendimento pensado para você.</p>
+        <div class="hero-actions"><button class="primary" id="agendarHero">Agendar horário</button><a class="secondary" href="#servicos">Conhecer serviços</a></div>
+        <div class="hero-meta"><span>SEG — SÁB</span><span>09:00 — 19:00</span><span>ATENDIMENTO COM HORA MARCADA</span></div>
+      </div>
+      <figure class="hero-media">
+        <img src="assets/barbeiro-borbobarber.png" alt="Barbeiro da BORBOBARBER em uma barbearia">
+        <figcaption><strong>BORBO / 01</strong><span>Precisão no corte.<br>Identidade no resultado.</span></figcaption>
+      </figure>
+    </section>
+
+    <section class="manifesto" aria-label="Identidade BORBOBARBER">
+      <span>PRECISÃO</span><i></i><span>ATITUDE</span><i></i><span>IDENTIDADE</span><i></i><span>BORBOBARBER</span>
+    </section>
+
+    <section class="section" id="servicos">
+      <div class="section-heading"><div><p class="eyebrow">02 / SERVIÇOS</p><h2>O essencial,<br>bem executado.</h2></div><p>Sem complicação. Escolha o serviço, confira a disponibilidade e marque seu horário pelo assistente.</p></div>
+      <div class="services">
+        <article class="service" data-service="Corte — R$ 35" tabindex="0"><span class="service-number">01</span><div><h3>Corte</h3><p>Clássico, social, degradê ou uma mudança completa.</p></div><strong>R$ 35</strong><button class="service-btn">Agendar <span>↗</span></button></article>
+        <article class="service" data-service="Barba — R$ 25" tabindex="0"><span class="service-number">02</span><div><h3>Barba</h3><p>Desenho, alinhamento e acabamento com precisão.</p></div><strong>R$ 25</strong><button class="service-btn">Agendar <span>↗</span></button></article>
+        <article class="service featured" data-service="Corte + Barba — R$ 55" tabindex="0"><span class="service-number">03</span><div><h3>Corte + Barba</h3><p>O combo completo para renovar o visual de uma vez.</p></div><strong>R$ 55</strong><button class="service-btn">Agendar <span>↗</span></button></article>
+        <article class="service" data-service="Sobrancelha — R$ 15" tabindex="0"><span class="service-number">04</span><div><h3>Sobrancelha</h3><p>Acabamento discreto para completar o visual.</p></div><strong>R$ 15</strong><button class="service-btn">Agendar <span>↗</span></button></article>
+      </div>
+    </section>
+
+    <section class="schedule-section" id="horarios">
+      <div class="schedule-intro"><p class="eyebrow">03 / HORÁRIOS</p><h2>Quando estamos<br>por aqui.</h2><p>Os horários abaixo representam o funcionamento da BORBOBARBER. A disponibilidade para agendamento aparece no assistente.</p></div>
+      <div class="schedule-list"><div><span>Segunda — Sexta</span><strong>09:00 — 19:00</strong></div><div><span>Sábado</span><strong>09:00 — 17:00</strong></div><div class="closed"><span>Domingo</span><strong>Fechado</strong></div></div>
+    </section>
+
+    <section class="cta" id="contato"><div><p class="eyebrow">04 / AGENDE</p><h2>Seu próximo corte<br>começa aqui.</h2></div><div class="cta-action"><p>Escolha seu serviço e encontre um horário disponível em poucos passos.</p><button class="primary" id="agendarFinal">Falar com o assistente <span>↗</span></button></div></section>
+  </main>
+
+  <footer><a href="#inicio" class="footer-brand">BORBO<span>BARBER</span></a><span>Projeto acadêmico · SENAI</span><span>© 2026 BORBOBARBER</span></footer>
+
+  <button class="chat-toggle" id="chatToggle" aria-label="Abrir atendimento"><span class="chat-mark">B</span><span class="chat-label">Agendar</span><i></i></button>
+  <div class="site-notification" id="siteNotification" role="alert" aria-live="assertive"></div>
+  <section class="auth-modal" id="authModal" aria-hidden="true">
+    <div class="auth-card">
+      <button class="auth-close" id="closeAuth" aria-label="Fechar">×</button>
+      <p class="tag" id="authTag">CADASTRO DO CLIENTE</p><h2 id="authTitle">Cadastre-se para agendar</h2><p class="auth-text" id="authText">O agendamento é liberado somente após um cadastro rápido.</p>
+      <div class="auth-tabs"><button type="button" class="auth-tab active" id="showRegister">Criar conta</button><button type="button" class="auth-tab" id="showLogin">Entrar</button></div>
+      <form id="authForm"><div class="auth-field"><label for="authName">Nome completo</label><input id="authName" type="text" autocomplete="name" placeholder="Seu nome completo" required></div><div class="auth-field"><label for="authPhone">Telefone</label><input id="authPhone" type="tel" autocomplete="tel" placeholder="(11) 99999-9999" required></div><div class="auth-field"><label for="authEmail">E-mail</label><input id="authEmail" type="email" autocomplete="email" placeholder="seuemail@exemplo.com" required></div><p class="auth-error" id="authError"></p><button class="primary auth-submit" id="authSubmit" type="submit">Cadastrar e continuar</button></form>
+      <form id="loginForm" hidden><div class="auth-field"><label for="loginPhone">Telefone</label><input id="loginPhone" type="tel" autocomplete="tel" placeholder="(11) 99999-9999" required></div><div class="auth-field"><label for="loginEmail">E-mail</label><input id="loginEmail" type="email" autocomplete="email" placeholder="seuemail@exemplo.com" required></div><p class="auth-error" id="loginError"></p><button class="primary auth-submit" type="submit">Entrar na minha conta</button></form>
+      <p class="auth-demo">Projeto SENAI · Dados salvos somente neste navegador.</p>
+    </div>
+  </section>
+
+  <section class="account-modal" id="accountModal" aria-hidden="true"><div class="account-card"><button class="auth-close" id="closeAccount" aria-label="Fechar">×</button><p class="tag">MINHA CONTA</p><h2>Suas informações</h2><div class="account-info"><div><span>Nome</span><strong id="accountName">-</strong></div><div><span>Telefone</span><strong id="accountPhone">-</strong></div><div><span>E-mail</span><strong id="accountEmail">-</strong></div></div><button class="logout-btn" id="logoutBtn">Sair da conta</button></div></section>
+
+  <section class="chat" id="chatBox"><div class="chat-header"><div class="bot-avatar">B</div><div><strong>BORBO ASSISTENTE</strong><span><i></i> Online</span></div><button id="closeChat">×</button></div><div class="chat-messages" id="chatMessages"></div><div class="chat-options" id="chatOptions"></div></section>
+  <script src="script.js"></script>
+</body>
+</html>
